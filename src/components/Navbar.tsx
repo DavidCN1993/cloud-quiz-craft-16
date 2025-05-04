@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
             "font-bold text-xl tracking-tight transition-colors duration-300",
             scrolled ? "text-quiz-dark" : "text-quiz-dark"
           )}>
-            AWS Certify
+            CloudCTRL
           </span>
         </Link>
 
@@ -121,7 +121,7 @@ const Navbar: React.FC = () => {
                 <div className="p-4 flex items-center justify-between border-b">
                   <Link to="/" onClick={() => setIsMenuOpen(false)} className="flex items-center space-x-2">
                     <Cloud className="h-6 w-6 text-quiz-primary" />
-                    <span className="font-bold text-lg">AWS Certify</span>
+                    <span className="font-bold text-lg">CloudCTRL</span>
                   </Link>
                   <SheetClose asChild>
                     <Button variant="ghost" size="icon" className="rounded-full h-8 w-8 flex items-center justify-center">
