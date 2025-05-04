@@ -20,15 +20,10 @@ const Landing: React.FC = () => {
         
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
-            <div className="inline-block mb-4 p-1.5 rounded-full bg-white/80 backdrop-blur shadow-sm border border-gray-100">
-              <div className="bg-blue-50 px-4 py-1 rounded-full">
-                <span className="text-sm font-medium text-quiz-primary">AWS Certified Cloud Practitioner</span>
-              </div>
-            </div>
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-quiz-dark leading-tight animate-fade-in">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-quiz-dark via-quiz-dark to-quiz-primary">
-                Master Your AWS Cloud Practitioner Exam
+                Become a DevOps Engineer
               </span>
             </h1>
             
