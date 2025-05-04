@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import {
   BookOpen,
-  GraduationCap,
+  Cloud,
   Menu,
   X,
   ChevronRight,
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
           onClick={() => setIsMenuOpen(false)}
         >
           <div className="relative">
-            <GraduationCap className={cn(
+            <Cloud className={cn(
               "w-8 h-8 transition-colors duration-300",
               scrolled ? "text-quiz-primary" : "text-quiz-primary"
             )} />
@@ -120,7 +120,7 @@ const Navbar: React.FC = () => {
               <div className="flex flex-col h-full">
                 <div className="p-4 flex items-center justify-between border-b">
                   <Link to="/" onClick={() => setIsMenuOpen(false)} className="flex items-center space-x-2">
-                    <GraduationCap className="h-6 w-6 text-quiz-primary" />
+                    <Cloud className="h-6 w-6 text-quiz-primary" />
                     <span className="font-bold text-lg">AWS Certify</span>
                   </Link>
                   <SheetClose asChild>
