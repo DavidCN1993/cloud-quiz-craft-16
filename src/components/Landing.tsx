@@ -28,16 +28,26 @@ const Landing: React.FC = () => {
             </h1>
             
             <p className="text-xl text-quiz-neutral mb-8 max-w-2xl animate-slide-up delay-100">
-              Practice with real-world scenarios, track your progress, and boost your confidence to pass the AWS certification with flying colors.
+              Practice with real-world scenarios, track your progress, and boost your confidence to become a cloud/devops engineer in 2025.
             </p>
             
-            <div className="mb-12 animate-fade-in delay-200">
+            <div className="mb-12 flex flex-col md:flex-row gap-4 animate-fade-in delay-200">
               <Link to="/quizzes">
                 <Button 
                   size={isMobile ? "default" : "lg"} 
                   className="rounded-full px-8 bg-quiz-primary hover:bg-quiz-primary/90 hover:shadow-lg hover:shadow-quiz-primary/20 transition-all duration-300 hover:-translate-y-1"
                 >
                   Browse Practice Tests
+                  <ChevronRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              
+              <Link to="/courses">
+                <Button 
+                  size={isMobile ? "default" : "lg"} 
+                  className="rounded-full px-8 bg-quiz-accent hover:bg-quiz-accent/90 hover:shadow-lg hover:shadow-quiz-accent/20 transition-all duration-300 hover:-translate-y-1"
+                >
+                  Browse Course Content
                   <ChevronRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -61,58 +71,6 @@ const Landing: React.FC = () => {
                 title="Detailed Reviews" 
                 description="Learn from your mistakes with comprehensive explanations." 
               />
-            </div>
-            
-            <div className="mt-16 w-full">
-              <div className="relative bg-gray-50 rounded-2xl p-6 md:p-8 shadow-sm animate-fade-in">
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-3 shadow-sm">
-                  <div className="bg-quiz-primary/10 rounded-full p-2">
-                    <BookOpen className="h-6 w-6 text-quiz-primary" />
-                  </div>
-                </div>
-                
-                <h2 className="text-xl md:text-2xl font-bold mt-4 mb-6 text-center">Ready to start practicing?</h2>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {quizzes.slice(0, 2).map((quiz) => (
-                    <Card key={quiz.id} className="overflow-hidden hover:shadow-md transition-all duration-300 border-quiz-secondary/30 bg-white">
-                      <CardContent className="p-0">
-                        <div className="p-5">
-                          <h3 className="text-lg font-bold mb-2">{quiz.title}</h3>
-                          <p className="text-sm text-quiz-neutral mb-4 line-clamp-2">{quiz.description}</p>
-                          
-                          <div className="grid grid-cols-2 gap-2 mb-4">
-                            <div className="flex items-center text-sm">
-                              <FileText className="mr-2 h-4 w-4 text-quiz-primary" />
-                              <span>{quiz.questions.length} Questions</span>
-                            </div>
-                            <div className="flex items-center text-sm">
-                              <Clock className="mr-2 h-4 w-4 text-quiz-primary" />
-                              <span>{quiz.timeLimit} Minutes</span>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <div className="bg-gradient-to-r from-quiz-primary/5 to-quiz-accent/10 p-3">
-                          <Link to={`/quiz/${quiz.id}`}>
-                            <Button className="w-full bg-white hover:bg-quiz-primary hover:text-white border border-quiz-primary/20 text-quiz-primary">
-                              Start Exam
-                            </Button>
-                          </Link>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-                
-                <div className="text-center mt-8">
-                  <Link to="/quizzes">
-                    <Button variant="outline" className="rounded-full">
-                      View All Practice Exams
-                    </Button>
-                  </Link>
-                </div>
-              </div>
             </div>
           </div>
         </div>
